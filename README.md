@@ -16,6 +16,80 @@ Yazlık bölgelerdeki arsalar, sıfır daireler ve müteahhit bağlantısı hizm
 - [Node.js](https://nodejs.org/) (18.17 veya üstü)
 - npm (Node.js ile birlikte gelir)
 
+### 📦 Node.js Kurulumu
+
+Node.js'i kurmak için işletim sisteminize göre aşağıdaki adımları izleyin:
+
+#### Windows
+
+1. [Node.js resmi sitesine](https://nodejs.org/) gidin
+2. **LTS (Uzun Süreli Destek)** sürümünü indirin (örn: 20.x.x LTS)
+3. İndirilen `.msi` dosyasını çalıştırın
+4. Kurulum sihirbazını takip edin:
+   - "Next" butonuna tıklayın
+   - Lisans sözleşmesini kabul edin
+   - Kurulum yolunu değiştirmeyin (varsayılan: `C:\Program Files\nodejs`)
+   - "Next" ve ardından "Install" butonuna tıklayın
+5. Kurulum tamamlandıktan sonra **Komut İstemi (CMD)** veya **PowerShell** açın
+6. Kurulumu doğrulayın:
+   ```bash
+   node --version
+   npm --version
+   ```
+
+#### macOS
+
+**Seçenek 1: Resmi Yükleyici**
+1. [Node.js resmi sitesine](https://nodejs.org/) gidin
+2. **LTS** sürümünü indirin
+3. İndirilen `.pkg` dosyasını çalıştırın ve kurulumu tamamlayın
+
+**Seçenek 2: Homebrew ile (Önerilir)**
+```bash
+# Homebrew yüklü değilse önce yükleyin:
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Node.js'i yükleyin:
+brew install node
+```
+
+Kurulumu doğrulayın:
+```bash
+node --version
+npm --version
+```
+
+#### Linux (Ubuntu/Debian)
+
+```bash
+# Paket listesini güncelleyin
+sudo apt update
+
+# Node.js 20.x kurun (NodeSource deposundan)
+curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
+sudo apt install -y nodejs
+
+# Kurulumu doğrulayın
+node --version
+npm --version
+```
+
+#### Linux (Fedora/RHEL)
+
+```bash
+# Node.js 20.x kurun
+curl -fsSL https://rpm.nodesource.com/setup_20.x | sudo bash -
+sudo dnf install -y nodejs
+
+# Kurulumu doğrulayın
+node --version
+npm --version
+```
+
+> 💡 **İpucu:** Kurulum doğru ise `node --version` komutu `v18.17.0` veya üstü bir sürüm numarası göstermelidir.
+
+---
+
 ### Adım Adım Kurulum
 
 1. **Depoyu klonlayın (eğer henüz yapmadıysanız):**
