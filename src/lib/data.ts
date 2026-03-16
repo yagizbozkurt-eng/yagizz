@@ -124,7 +124,7 @@ export const landListings: LandListing[] = [
     price: 2100000,
     area: 3500,
     description:
-      "Dünyaca ünlü Ölüdeniz'in hemen yakınında, doğa içinde huzurlu bir arazi. Küçük tatil bungalovları veya glamping projesi için ideal. Tarihi deniz görüntüsüne sahip.",
+      "Dünyaca ünlü Ölüdeniz'in hemen yakınında, doğa içinde huzurlu bir arazi. Küçük tatil bungalovları veya glamping projesi için ideal. Eşsiz mavi lagün manzarasına sahip.",
     features: [
       "Ölüdeniz'e 1.5 km",
       "Deniz ve orman manzarası",
@@ -143,7 +143,7 @@ export const landListings: LandListing[] = [
   },
   {
     id: "arsa-004",
-    title: "Marmaris Içmeler'de Plaja Yakın Arsa",
+    title: "Marmaris İçmeler'de Plaja Yakın Arsa",
     location: "İçmeler, Marmaris",
     region: "Muğla",
     price: 3200000,
@@ -253,7 +253,7 @@ export const apartmentListings: ApartmentListing[] = [
   },
   {
     id: "daire-002",
-    title: "Çeşme Yeni Proje: Alacatı Residence 2+1",
+    title: "Çeşme Yeni Proje: Alaçatı Residence 2+1",
     company: "Ege Yapı Grubu",
     location: "Alaçatı, Çeşme",
     region: "İzmir",
@@ -382,7 +382,7 @@ export const apartmentListings: ApartmentListing[] = [
     floor: 18,
     totalFloors: 32,
     description:
-      "Kartal'da yeni tamamlanan yüksek katlı rezidans projesinde sıfır daire. Adalar ve Prens Adaları manzaralı yüksek katlar. Metro istasyonuna 5 dakika yürüme mesafesi.",
+      "Kartal'da yeni tamamlanan yüksek katlı rezidans projesinde sıfır daire. Adalar ve İstanbul silueti manzaralı yüksek katlar. Metro istasyonuna 5 dakika yürüme mesafesi.",
     features: [
       "Adalar manzarası",
       "Rezidans hizmetleri",
