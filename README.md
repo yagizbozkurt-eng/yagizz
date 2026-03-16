@@ -37,26 +37,32 @@ Node.js'i kurmak için işletim sisteminize göre aşağıdaki adımları izleyi
    npm --version
    ```
 
-#### macOS
+#### macOS (Mac Bilgisayar)
 
-**Seçenek 1: Resmi Yükleyici**
-1. [Node.js resmi sitesine](https://nodejs.org/) gidin
-2. **LTS** sürümünü indirin
-3. İndirilen `.pkg` dosyasını çalıştırın ve kurulumu tamamlayın
+**Seçenek 1: Resmi Yükleyici (En Kolay - Önerilir)**
 
-**Seçenek 2: Homebrew ile (Önerilir)**
-```bash
-# Homebrew yüklü değilse önce yükleyin:
+1. Tarayıcınızda şu adrese gidin: **https://nodejs.org/**
+2. Yeşil **"LTS"** butonuna tıklayın (dosya indirilecek)
+3. İndirilen `.pkg` dosyasını çift tıklayarak açın
+4. Kurulum sihirbazında "Continue" butonlarına tıklayın
+5. Mac şifrenizi girin ve kurulumu tamamlayın
+
+**Kurulumu test edin:** Terminal'i açın ve şu komutu yapıştırın:
+```
+node --version
+```
+Sürüm numarası görünüyorsa (örn: `v20.11.0`) kurulum başarılı!
+
+**Seçenek 2: Homebrew ile**
+
+Homebrew yüklü değilse önce bu komutu Terminal'e yapıştırın:
+```
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-
-# Node.js'i yükleyin:
-brew install node
 ```
 
-Kurulumu doğrulayın:
-```bash
-node --version
-npm --version
+Sonra Node.js'i yüklemek için bu komutu yapıştırın:
+```
+brew install node
 ```
 
 #### Linux (Ubuntu/Debian)
@@ -90,27 +96,49 @@ npm --version
 
 ---
 
-### Adım Adım Kurulum
+### Adım Adım Proje Kurulumu
 
-1. **Depoyu klonlayın (eğer henüz yapmadıysanız):**
-   ```bash
-   git clone https://github.com/yagizbozkurt-eng/yagizz.git
-   cd yagizz
-   ```
+> ⚠️ **ÖNEMLİ:** Aşağıdaki komutları **tek tek** kopyalayıp Terminal'e yapıştırın. Her komuttan sonra Enter'a basın ve komutun bitmesini bekleyin.
 
-2. **Bağımlılıkları yükleyin:**
-   ```bash
-   npm install
-   ```
+**Adım 1:** Projeyi indirin (Terminal'e bu komutu yapıştırın):
+```
+git clone https://github.com/yagizbozkurt-eng/yagizz.git
+```
 
-3. **Development sunucusunu başlatın:**
-   ```bash
-   npm run dev
-   ```
+**Adım 2:** Proje klasörüne girin:
+```
+cd yagizz
+```
 
-4. **Tarayıcınızda siteyi görüntüleyin:**
-   
-   Tarayıcınızı açın ve [http://localhost:3000](http://localhost:3000) adresine gidin.
+**Adım 3:** Bağımlılıkları yükleyin (bu birkaç dakika sürebilir):
+```
+npm install
+```
+
+**Adım 4:** Siteyi başlatın:
+```
+npm run dev
+```
+
+**Adım 5:** Tarayıcınızda siteyi görüntüleyin:
+
+Tarayıcınızı açın ve adres çubuğuna yazın: **http://localhost:3000**
+
+---
+
+### 🛠️ Sorun Giderme
+
+**"command not found: #" hatası alıyorsanız:**
+- `#` ile başlayan satırlar yorum satırıdır, bunları Terminal'e yapıştırmayın
+- Sadece komutları (örn: `npm install`) tek tek yapıştırın
+
+**"no such file or directory: yagizz" hatası alıyorsanız:**
+- Önce `git clone` komutunu çalıştırdığınızdan emin olun
+- Proje klasörünün indirildiğini kontrol edin
+
+**"Could not read package.json" hatası alıyorsanız:**
+- `cd yagizz` komutuyla proje klasörüne girdiğinizden emin olun
+- Terminal'de `pwd` yazıp Enter'a basın - yolun sonunda `yagizz` yazmalı
 
 ### Diğer Komutlar
 
