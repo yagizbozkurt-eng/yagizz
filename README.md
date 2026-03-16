@@ -128,17 +128,50 @@ Tarayıcınızı açın ve adres çubuğuna yazın: **http://localhost:3000**
 
 ### 🛠️ Sorun Giderme
 
-**"command not found: #" hatası alıyorsanız:**
-- `#` ile başlayan satırlar yorum satırıdır, bunları Terminal'e yapıştırmayın
-- Sadece komutları (örn: `npm install`) tek tek yapıştırın
+#### ❌ "cd: no such file or directory: yagizz" hatası
 
-**"no such file or directory: yagizz" hatası alıyorsanız:**
-- Önce `git clone` komutunu çalıştırdığınızdan emin olun
-- Proje klasörünün indirildiğini kontrol edin
+Bu hata, `yagizz` klasörünün henüz oluşturulmadığı anlamına gelir.
 
-**"Could not read package.json" hatası alıyorsanız:**
-- `cd yagizz` komutuyla proje klasörüne girdiğinizden emin olun
-- Terminal'de `pwd` yazıp Enter'a basın - yolun sonunda `yagizz` yazmalı
+**Çözüm:** Önce projeyi indirmeniz gerekiyor. Şu komutu Terminal'e yapıştırın:
+```
+git clone https://github.com/yagizbozkurt-eng/yagizz.git
+```
+
+Komut çalıştıktan sonra şöyle bir çıktı görmelisiniz:
+```
+Cloning into 'yagizz'...
+remote: Enumerating objects: ...
+```
+
+Sonra `cd yagizz` komutunu çalıştırabilirsiniz.
+
+#### ❌ "command not found: #" hatası
+
+`#` ile başlayan satırlar yorum satırıdır - bunları Terminal'e yapıştırmayın!
+
+**Çözüm:** Sadece komutları tek tek kopyalayın. Örneğin:
+- ✅ Doğru: `npm install`
+- ❌ Yanlış: `# Bağımlılıkları yükle` + `npm install` (birlikte yapıştırma)
+
+#### ❌ "Could not read package.json" hatası
+
+Bu hata, doğru klasörde olmadığınız anlamına gelir.
+
+**Çözüm:**
+1. Terminal'de şu komutu yazın: `pwd`
+2. Çıktının sonunda `/yagizz` yazıyor olmalı
+3. Yazmıyorsa: `cd yagizz` komutunu çalıştırın
+
+#### ❌ "git: command not found" hatası
+
+Git yüklü değil.
+
+**macOS için çözüm:**
+```
+xcode-select --install
+```
+
+Açılan pencerede "Install" butonuna tıklayın.
 
 ### Diğer Komutlar
 
